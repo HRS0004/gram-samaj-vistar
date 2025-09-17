@@ -15,7 +15,11 @@ import {
 } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 
-const Contact = () => {
+interface ContactProps {
+  config: any;
+}
+
+const Contact: React.FC<ContactProps> = ({ config }) => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -61,35 +65,29 @@ const Contact = () => {
       icon: <MapPin className="w-6 h-6 text-primary" />,
       title: "पत्ता",
       content: [
-        "शिवपूर ग्राम पंचायत कार्यालय",
-        "शिवपूर, तालुका - पुरंदर",
-        "जिल्हा - पुणे, महाराष्ट्र ४१२३०२"
+        config.contact.address
       ]
     },
     {
       icon: <Phone className="w-6 h-6 text-primary" />,
       title: "दूरध्वनी",
       content: [
-        "मुख्य कार्यालय: +९१ ९८७६५ ४३२१०",
-        "आपत्कालीन: +९१ ९८७६५ ४३२००",
-        "फॅक्स: +९१ २०१२ ३४५६७८"
+        `मुख्य कार्यालय: ${config.contact.phone}`,
+        "आपत्कालीन: +९१ ९८७६५ ४३२००"
       ]
     },
     {
       icon: <Mail className="w-6 h-6 text-primary" />,
       title: "ईमेल",
       content: [
-        "shivpur.panchayat@gov.in",
-        "sarpanch.shivpur@gov.in",
-        "complaints.shivpur@gov.in"
+        config.contact.email
       ]
     },
     {
       icon: <Clock className="w-6 h-6 text-primary" />,
       title: "कार्यकाळ",
       content: [
-        "सोमवार ते शुक्रवार",
-        "सकाळी ९:३० ते संध्याकाळी ५:३०",
+        config.contact.timings,
         "शनिवार: सकाळी ९:३० ते दुपारी १:००"
       ]
     }

@@ -3,7 +3,11 @@ import { Button } from '@/components/ui/button';
 import { ArrowRight, MapPin } from 'lucide-react';
 import heroPanchayat from '@/assets/hero-panchayat.jpg';
 
-const Hero = () => {
+interface HeroProps {
+  config: any;
+}
+
+const Hero: React.FC<HeroProps> = ({ config }) => {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image with Overlay */}
@@ -29,13 +33,13 @@ const Hero = () => {
 
           {/* Main Heading */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 font-marathi leading-tight">
-            शिवपूर पंचायतात आपले स्वागत आहे
+            {config.panchayat.name} अधिकृत संकेतस्थळ
           </h1>
 
           {/* Location */}
           <div className="flex items-center justify-center gap-2 text-lg md:text-xl mb-8 opacity-90">
             <MapPin className="w-5 h-5" />
-            <span className="font-marathi">तालुका - पुरंदर, जिल्हा - पुणे, महाराष्ट्र</span>
+            <span className="font-marathi">तालुका - {config.panchayat.taluka}, जिल्हा - {config.panchayat.district}, महाराष्ट्र</span>
           </div>
 
           {/* Description */}

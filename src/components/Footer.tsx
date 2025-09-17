@@ -10,7 +10,11 @@ import {
   ExternalLink
 } from 'lucide-react';
 
-const Footer = () => {
+interface FooterProps {
+  config: any;
+}
+
+const Footer: React.FC<FooterProps> = ({ config }) => {
   const currentYear = new Date().getFullYear();
 
   const quickLinks = [
@@ -33,8 +37,8 @@ const Footer = () => {
 
   const legalPages = [
     { name: 'गोपनीयता धोरण', href: '#privacy' },
-    { name: 'अटी व शर्ती', href: '#terms' },
-    { name: 'अस्वीकरण', href: '#disclaimer' },
+    { name: 'अंतर्गत तपासणी', href: '#audit' },
+    { name: 'शपथपत्र', href: '#disclaimer' },
     { name: 'सुलभता', href: '#accessibility' }
   ];
 
@@ -49,8 +53,8 @@ const Footer = () => {
                 श्री
               </div>
               <div>
-                <h3 className="text-lg font-bold font-marathi">शिवपूर ग्राम पंचायत</h3>
-                <p className="text-sm text-primary-foreground/80 font-marathi">पुरंदर तालुका, पुणे</p>
+                <h3 className="text-lg font-bold font-marathi">{config.panchayat.name}</h3>
+                <p className="text-sm text-primary-foreground/80 font-marathi">{config.panchayat.taluka} तालुका, {config.panchayat.district}</p>
               </div>
             </div>
             <p className="text-sm text-primary-foreground/80 leading-relaxed font-marathi">
@@ -61,15 +65,15 @@ const Footer = () => {
             <div className="space-y-2 pt-4">
               <div className="flex items-center gap-2 text-sm">
                 <MapPin className="w-4 h-4 flex-shrink-0" />
-                <span className="font-marathi">शिवपूर, तालुका - पुरंदर, जिल्हा - पुणे</span>
+                <span className="font-marathi">{config.contact.address}</span>
               </div>
               <div className="flex items-center gap-2 text-sm">
                 <Phone className="w-4 h-4 flex-shrink-0" />
-                <span>+९१ ९८७६५ ४३२१०</span>
+                <span>{config.contact.phone}</span>
               </div>
               <div className="flex items-center gap-2 text-sm">
                 <Mail className="w-4 h-4 flex-shrink-0" />
-                <span>shivpur.panchayat@gov.in</span>
+                <span>{config.contact.email}</span>
               </div>
             </div>
           </div>
@@ -151,7 +155,7 @@ const Footer = () => {
         <div className="flex flex-col lg:flex-row justify-between items-center gap-4">
           <div className="text-sm text-primary-foreground/80 text-center lg:text-left">
             <p className="font-marathi">
-              © {currentYear} शिवपूर ग्राम पंचायत. सर्व हक्क राखीव.
+              © {currentYear} {config.panchayat.name}. सर्व हक्क राखीव.
             </p>
             <p className="mt-1">
               Powered by Digital India Initiative | Government of Maharashtra

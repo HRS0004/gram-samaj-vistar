@@ -11,49 +11,13 @@ import heroPanchayat from '@/assets/hero-panchayat.jpg';
 
 interface GalleryProps {
   variant?: 'grid' | 'masonry';
+  config: any;
 }
 
-const Gallery: React.FC<GalleryProps> = ({ variant = 'masonry' }) => {
+const Gallery: React.FC<GalleryProps> = ({ variant = 'masonry', config }) => {
   const [selectedImage, setSelectedImage] = useState<any>(null);
 
-  const galleryImages = [
-    {
-      src: communityImage,
-      title: "समुदायिक सभा",
-      description: "ग्रामसभेत सक्रिय सहभाग घेणारे नागरिक",
-      category: "सभा"
-    },
-    {
-      src: developmentImage,
-      title: "विकास प्रकल्प",
-      description: "गावातील पायाभूत सुविधांचा विकास",
-      category: "विकास"
-    },
-    {
-      src: festivalImage,
-      title: "सांस्कृतिक कार्यक्रम",
-      description: "गावातील पारंपरिक उत्सव आणि सण",
-      category: "सांस्कृतिक"
-    },
-    {
-      src: agricultureImage,
-      title: "शेती आणि शेतकरी",
-      description: "आधुनिक शेती तंत्रज्ञानाचा वापर",
-      category: "शेती"
-    },
-    {
-      src: panchayatOffice,
-      title: "पंचायत कार्यालय",
-      description: "आधुनिक सुविधांसह सुसज्ज कार्यालय",
-      category: "प्रशासन"
-    },
-    {
-      src: heroPanchayat,
-      title: "गावाचे दृश्य",
-      description: "शिवपूर गावाचे सुंदर नैसर्गिक दृश्य",
-      category: "निसर्ग"
-    }
-  ];
+  const galleryImages = config.gallery;
 
   const categories = ["सर्व", "सभा", "विकास", "सांस्कृतिक", "शेती", "प्रशासन", "निसर्ग"];
   const [activeCategory, setActiveCategory] = useState("सर्व");
@@ -121,8 +85,8 @@ const Gallery: React.FC<GalleryProps> = ({ variant = 'masonry' }) => {
               >
                 <div className="relative overflow-hidden">
                   <img
-                    src={image.src}
-                    alt={image.title}
+                    src={image.image}
+                    alt={image.caption}
                     className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/50 transition-all duration-300 flex items-center justify-center">
@@ -131,8 +95,7 @@ const Gallery: React.FC<GalleryProps> = ({ variant = 'masonry' }) => {
                     </div>
                   </div>
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-4">
-                    <h3 className="text-white font-semibold mb-1 font-marathi">{image.title}</h3>
-                    <p className="text-white/80 text-sm font-marathi">{image.description}</p>
+                    <h3 className="text-white font-semibold mb-1 font-marathi">{image.caption}</h3>
                     <span className="inline-block bg-white/20 text-white text-xs px-2 py-1 rounded mt-2 font-marathi">
                       {image.category}
                     </span>
@@ -162,14 +125,13 @@ const Gallery: React.FC<GalleryProps> = ({ variant = 'masonry' }) => {
               <X className="w-6 h-6 text-white" />
             </button>
             <img
-              src={selectedImage.src}
-              alt={selectedImage.title}
+              src={selectedImage.image}
+              alt={selectedImage.caption}
               className="w-full h-full object-contain rounded-lg"
               onClick={(e) => e.stopPropagation()}
             />
             <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 rounded-b-lg">
-              <h3 className="text-white text-xl font-bold mb-2 font-marathi">{selectedImage.title}</h3>
-              <p className="text-white/90 font-marathi">{selectedImage.description}</p>
+              <h3 className="text-white text-xl font-bold mb-2 font-marathi">{selectedImage.caption}</h3>
             </div>
           </div>
         </div>

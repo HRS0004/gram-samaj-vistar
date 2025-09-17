@@ -3,7 +3,11 @@ import { Card, CardContent } from '@/components/ui/card';
 import { MapPin, Users, Calendar, Award } from 'lucide-react';
 import panchayatOffice from '@/assets/panchayat-office.jpg';
 
-const About = () => {
+interface AboutProps {
+  config: any;
+}
+
+const About: React.FC<AboutProps> = ({ config }) => {
   const highlights = [
     {
       icon: <MapPin className="w-8 h-8 text-primary" />,
@@ -51,13 +55,7 @@ const About = () => {
             <div className="space-y-6">
               <div className="space-y-4">
                 <p className="text-lg leading-relaxed text-muted-foreground font-marathi">
-                  शिवपूर ग्राम पंचायत पुरंदर तालुक्यातील एक अग्रगण्य पंचायत आहे. आमची स्थापना १९५२ मध्ये झाली आणि तेव्हापासून आम्ही गावातील नागरिकांच्या कल्याणासाठी निरंतर कार्य करत आहोत.
-                </p>
-                <p className="text-lg leading-relaxed text-muted-foreground font-marathi">
-                  आमच्या पंचायतीत आधुनिक तंत्रज्ञानाचा वापर करून सर्व सेवा डिजिटल केल्या आहेत. नागरिक सेवा, योजनांची अंमलबजावणी, आणि शासकीय कामकाजात पारदर्शकता आमचे मुख्य उद्दिष्ट आहे.
-                </p>
-                <p className="text-lg leading-relaxed text-muted-foreground font-marathi">
-                  आमची दृष्टी एक आत्मनिर्भर, शिक्षित आणि समृद्ध गाव निर्माण करण्याची आहे. महात्मा गांधी राष्ट्रीय ग्रामीण रोजगार हमी योजना, स्वच्छ भारत अभियान, आणि इतर केंद्र व राज्य सरकारच्या योजनांची यशस्वी अंमलबजावणी करत आहोत.
+                  {config.aboutText}
                 </p>
               </div>
 
@@ -95,7 +93,7 @@ const About = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
                 <div className="absolute bottom-6 left-6 text-white">
-                  <h3 className="text-xl font-semibold mb-2 font-marathi">शिवपूर पंचायत कार्यालय</h3>
+                  <h3 className="text-xl font-semibold mb-2 font-marathi">{config.panchayat.name} कार्यालय</h3>
                   <p className="text-sm opacity-90 font-marathi">आधुनिक सुविधांसह नागरिक सेवा केंद्र</p>
                 </div>
               </div>

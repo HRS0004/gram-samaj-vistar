@@ -7,20 +7,21 @@ import Officials from '@/components/Officials';
 import Gallery from '@/components/Gallery';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
+import config from '../../config.json';
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
-      <Header />
+      <Header config={config} />
       <main>
-        <Hero />
-        <About />
-        <Services />
-        <Officials />
-        <Gallery variant="masonry" />
-        <Contact />
+        <Hero config={config} />
+        <About config={config} />
+        <Services config={config} />
+        <Officials config={config} />
+        <Gallery config={config} variant="masonry" />
+        <Contact config={config} />
       </main>
-      <Footer />
+      <Footer config={config} />
     </div>
   );
 };

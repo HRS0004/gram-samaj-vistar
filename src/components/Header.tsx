@@ -2,7 +2,11 @@ import React, { useState } from 'react';
 import { Menu, X, Phone, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
-const Header = () => {
+interface HeaderProps {
+  config: any;
+}
+
+const Header: React.FC<HeaderProps> = ({ config }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navigation = [
@@ -17,6 +21,26 @@ const Header = () => {
 
   return (
     <header className="sticky top-0 z-50 bg-white shadow-card">
+      {/* Government Branding Bar */}
+      <div className="bg-gradient-to-r from-saffron via-white to-green text-center py-2 border-b-2 border-primary">
+        <div className="container mx-auto px-4">
+          <div className="flex justify-between items-center">
+            <div className="flex items-center gap-2">
+              <span className="text-2xl">🇮🇳</span>
+              <span className="text-xs font-semibold text-primary">भारत सरकार</span>
+            </div>
+            <div className="text-center">
+              <div className="text-sm font-bold text-primary">महाराष्ट्र शासन</div>
+              <div className="text-xs text-muted-foreground">Government of Maharashtra</div>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="text-xs font-semibold text-primary">राष्ट्रीय प्रतीक</span>
+              <span className="text-2xl">🏛️</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Top Contact Bar */}
       <div className="bg-primary text-primary-foreground py-2">
         <div className="container mx-auto px-4">
@@ -24,15 +48,15 @@ const Header = () => {
             <div className="flex items-center gap-4">
               <div className="flex items-center gap-1">
                 <Phone className="w-3 h-3" />
-                <span>+९१ ९८७६५ ४३२१०</span>
+                <span>{config.contact.phone}</span>
               </div>
               <div className="flex items-center gap-1">
                 <Mail className="w-3 h-3" />
-                <span>shivpur.panchayat@gov.in</span>
+                <span>{config.contact.email}</span>
               </div>
             </div>
             <div className="hidden md:block">
-              <span>महाराष्ट्र शासन | Government of Maharashtra</span>
+              <span>सत्यमेव जयते | Satyameva Jayate</span>
             </div>
           </div>
         </div>
@@ -48,10 +72,10 @@ const Header = () => {
             </div>
             <div className="hidden sm:block">
               <h1 className="text-xl font-bold text-primary font-marathi">
-                शिवपूर ग्राम पंचायत
+                {config.panchayat.name}
               </h1>
               <p className="text-sm text-muted-foreground">
-                तालुका - पुरंदर, जिल्हा - पुणे
+                तालुका - {config.panchayat.taluka}, जिल्हा - {config.panchayat.district}
               </p>
             </div>
           </div>
