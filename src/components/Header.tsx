@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Menu, X, Phone, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import flagIndia from '@/assets/flag-india.png';
+import emblemIndia from '@/assets/emblem-india.png';
 
 interface HeaderProps {
   config: any;
@@ -22,41 +24,51 @@ const Header: React.FC<HeaderProps> = ({ config }) => {
   return (
     <header className="sticky top-0 z-50 bg-white shadow-card">
       {/* Government Branding Bar */}
-      <div className="bg-gradient-to-r from-saffron via-white to-green text-center py-2 border-b-2 border-primary">
+      <div className="bg-primary text-primary-foreground py-2">
         <div className="container mx-auto px-4">
-          <div className="flex justify-between items-center">
+          <div className="flex justify-between items-center text-sm">
+            {/* Left - Indian Flag */}
             <div className="flex items-center gap-2">
-              <span className="text-2xl">🇮🇳</span>
-              <span className="text-xs font-semibold text-primary">भारत सरकार</span>
+              <img 
+                src={flagIndia} 
+                alt="भारताचा राष्ट्रीय ध्वज" 
+                className="w-8 h-5 object-contain"
+              />
+              <span className="font-marathi">भारत सरकार</span>
             </div>
-            <div className="text-center">
-              <div className="text-sm font-bold text-primary">महाराष्ट्र शासन</div>
-              <div className="text-xs text-muted-foreground">Government of Maharashtra</div>
+            
+            {/* Center - National Motto */}
+            <div className="hidden md:block text-center">
+              <span className="font-semibold">सत्यमेव जयते | Satyameva Jayate</span>
             </div>
+            
+            {/* Right - State Emblem */}
             <div className="flex items-center gap-2">
-              <span className="text-xs font-semibold text-primary">राष्ट्रीय प्रतीक</span>
-              <span className="text-2xl">🏛️</span>
+              <span className="font-marathi">महाराष्ट्र शासन</span>
+              <img 
+                src={emblemIndia} 
+                alt="अशोक स्तंभ" 
+                className="w-6 h-6 object-contain"
+              />
             </div>
           </div>
         </div>
       </div>
 
-      {/* Top Contact Bar */}
-      <div className="bg-primary text-primary-foreground py-2">
+      {/* Contact Bar */}
+      <div className="bg-secondary text-secondary-foreground py-1">
         <div className="container mx-auto px-4">
-          <div className="flex justify-between items-center text-sm">
-            <div className="flex items-center gap-4">
-              <div className="flex items-center gap-1">
-                <Phone className="w-3 h-3" />
-                <span>{config.contact.phone}</span>
-              </div>
-              <div className="flex items-center gap-1">
-                <Mail className="w-3 h-3" />
-                <span>{config.contact.email}</span>
-              </div>
+          <div className="flex justify-center items-center gap-6 text-xs">
+            <div className="flex items-center gap-1">
+              <Phone className="w-3 h-3" />
+              <span>{config.contact.phone}</span>
             </div>
-            <div className="hidden md:block">
-              <span>सत्यमेव जयते | Satyameva Jayate</span>
+            <div className="flex items-center gap-1">
+              <Mail className="w-3 h-3" />
+              <span>{config.contact.email}</span>
+            </div>
+            <div className="hidden sm:block">
+              <span>{config.contact.timings}</span>
             </div>
           </div>
         </div>
@@ -80,17 +92,44 @@ const Header: React.FC<HeaderProps> = ({ config }) => {
             </div>
           </div>
 
-          {/* Desktop Navigation */}
+          {/* Navigation Links */}
           <div className="hidden lg:flex items-center gap-1">
-            {navigation.map((item) => (
-              <a
-                key={item.name}
-                href={item.href}
-                className="px-4 py-2 text-sm font-medium text-muted-foreground hover:text-primary hover:bg-accent rounded-md transition-colors duration-200"
-              >
-                {item.name}
-              </a>
-            ))}
+            <a
+              href="#home"
+              className="px-4 py-2 text-sm font-medium text-muted-foreground hover:text-primary hover:bg-accent rounded-md transition-colors duration-200 font-marathi"
+            >
+              मुख्यपृष्ठ
+            </a>
+            <a
+              href="#about"
+              className="px-4 py-2 text-sm font-medium text-muted-foreground hover:text-primary hover:bg-accent rounded-md transition-colors duration-200 font-marathi"
+            >
+              पंचायत माहिती
+            </a>
+            <a
+              href="#services"
+              className="px-4 py-2 text-sm font-medium text-muted-foreground hover:text-primary hover:bg-accent rounded-md transition-colors duration-200 font-marathi"
+            >
+              योजना
+            </a>
+            <a
+              href="#officials"
+              className="px-4 py-2 text-sm font-medium text-muted-foreground hover:text-primary hover:bg-accent rounded-md transition-colors duration-200 font-marathi"
+            >
+              पदाधिकारी
+            </a>
+            <a
+              href="#gallery"
+              className="px-4 py-2 text-sm font-medium text-muted-foreground hover:text-primary hover:bg-accent rounded-md transition-colors duration-200 font-marathi"
+            >
+              गॅलरी
+            </a>
+            <a
+              href="#contact"
+              className="px-4 py-2 text-sm font-medium text-muted-foreground hover:text-primary hover:bg-accent rounded-md transition-colors duration-200 font-marathi"
+            >
+              संपर्क
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
