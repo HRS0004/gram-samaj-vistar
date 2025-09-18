@@ -1,1 +1,106 @@
-{\n  "panchayat": {\n    "name": "शिवपूर ग्राम पंचायत",\n    "taluka": "पुरंदर",\n    "district": "पुणे"\n  },\n  "colors": {\n    "primary": "#2563eb",\n    "secondary": "#ea580c"\n  },\n  "aboutText": "शिवपूर ग्राम पंचायत पुरंदर तालुक्यातील एक अग्रगण्य पंचायत आहे. आमच्या पंचायतच्या माध्यमातून आम्ही गावाच्या सर्वांगीण विकासासाठी विविध योजना राबवत आहोत. गावात पायाभूत सुविधा, आरोग्य, शिक्षण, आणि सांस्कृतिक कार्यक्रम यांचा समावेश असून नागरिकांच्या सहभागाने पंचायत कार्यरत आहे.",\n  "schemes": [\n    {\n      "name": "महात्मा गांधी राष्ट्रीय ग्रामीण रोजगार हमी योजना",\n      "description": "ग्रामीण भागातील कुटुंबांना वर्षभरात १०० दिवस रोजगाराची हमी",\n      "beneficiaries": "१,२०० कुटुंबे",\n      "status": "सक्रिय"\n    },\n    {\n      "name": "प्रधानमंत्री आवास योजना - ग्रामीण",\n      "description": "गरीब घरकुलांना पक्के घर बांधण्यासाठी आर्थिक सहाय्य",\n      "beneficiaries": "३५० कुटुंबे",\n      "status": "सक्रिय"\n    },\n    {\n      "name": "स्वच्छ भारत मिशन - ग्रामीण",\n      "description": "स्वच्छता आणि खुल्या शौचालयमुक्त गाव निर्मिती",\n      "beneficiaries": "संपूर्ण गाव",\n      "status": "सक्रिय"\n    },\n    {\n      "name": "उज्ज्वला योजना",\n      "description": "महिलांना मोफत गॅस कनेक्शन उपलब्ध करून देणे",\n      "beneficiaries": "४५० महिला",\n      "status": "सक्रिय"\n    }\n  ],\n  "officials": [\n    {\n      "name": "श्री. रमेश शेटे",\n      "title": "सरपंच",\n      "phone": "+९१ ९८७६५ ४३२१०",\n      "email": "sarpanch.shivpur@gov.in",\n      "image": "/images/sarpanch.jpg"\n    },\n    {\n      "name": "श्रीमती सुनिता पाटील",\n      "title": "उपसरपंच",\n      "phone": "+९१ ९८७६५ ४३२११",\n      "email": "upsarpanch.shivpur@gov.in",\n      "image": "/images/upsarpanch.jpg"\n    },\n    {\n      "name": "श्री. संदीप कुलकर्णी",\n      "title": "ग्रामसेवक",\n      "phone": "+९१ ९८७६५ ४३२१२",\n      "email": "gramsevak.shivpur@gov.in",\n      "image": "/images/gramsevak.jpg"\n    },\n    {\n      "name": "श्रीमती मंगला जाधव",\n      "title": "सचिव",\n      "phone": "+९१ ९८७६५ ४३२१३",\n      "email": "secretary.shivpur@gov.in",\n      "image": "/images/secretary.jpg"\n    }\n  ],\n  "gallery": [\n    {\n      "image": "https://picsum.photos/id/1015/600/400",\n      "caption": "ग्रामसभेत सक्रिय सहभाग घेणारे नागरिक (Placeholder 1)",\n      "category": "सभा"\n    },\n    {\n      "image": "https://picsum.photos/id/1025/600/400",\n      "caption": "गावातील पायाभूत सुविधांचा विकास (Placeholder 2)",\n      "category": "विकास"\n    },\n    {\n      "image": "https://picsum.photos/id/1035/600/400",\n      "caption": "गावातील पारंपरिक उत्सव आणि सण (Placeholder 3)",\n      "category": "सांस्कृतिक"\n    },\n    {\n      "image": "https://picsum.photos/id/1045/600/400",\n      "caption": "आधुनिक शेती तंत्रज्ञानाचा वापर (Placeholder 4)",\n      "category": "शेती"\n    },\n    {\n      "image": "https://picsum.photos/id/1055/600/400",\n      "caption": "आधुनिक सुविधांसह सुसज्ज कार्यालय (Placeholder 5)",\n      "category": "प्रशासन"\n    },\n    {\n      "image": "https://picsum.photos/id/1065/600/400",\n      "caption": "शिवपूर गावाचे सुंदर नैसर्गिक दृश्य (Placeholder 6)",\n      "category": "निसर्ग"\n    }\n  ],\n  "contact": {\n    "address": "शिवपूर ग्राम पंचायत कार्यालय, पुरंदर तालुका, पुणे जिल्हा, महाराष्ट्र, ४१२३०१",\n    "phone": "+९१ ९८७६५ ४३२१०",\n    "email": "shivpur.panchayat@gov.in",\n    "timings": "सकाळ ९:०० ते संध्याकाळ ५:००"\n  }\n}
+{
+  "panchayat": {
+    "name": "शिवपूर ग्राम पंचायत",
+    "taluka": "पुरंदर",
+    "district": "पुणे"
+  },
+  "colors": {
+    "primary": "#2563eb",
+    "secondary": "#ea580c"
+  },
+  "aboutText": "शिवपूर ग्राम पंचायत पुरंदर तालुक्यातील एक अग्रगण्य पंचायत आहे. आमच्या पंचायतच्या माध्यमातून आम्ही गावाच्या सर्वांगीण विकासासाठी विविध योजना राबवत आहोत. गावात पायाभूत सुविधा, आरोग्य, शिक्षण, आणि सांस्कृतिक कार्यक्रम यांचा समावेश असून नागरिकांच्या सहभागाने पंचायत कार्यरत आहे.",
+  "schemes": [
+    {
+      "name": "महात्मा गांधी राष्ट्रीय ग्रामीण रोजगार हमी योजना",
+      "description": "ग्रामीण भागातील कुटुंबांना वर्षभरात १०० दिवस रोजगाराची हमी",
+      "beneficiaries": "१,२०० कुटुंबे",
+      "status": "सक्रिय"
+    },
+    {
+      "name": "प्रधानमंत्री आवास योजना - ग्रामीण",
+      "description": "गरीब घरकुलांना पक्के घर बांधण्यासाठी आर्थिक सहाय्य",
+      "beneficiaries": "३५० कुटुंबे",
+      "status": "सक्रिय"
+    },
+    {
+      "name": "स्वच्छ भारत मिशन - ग्रामीण",
+      "description": "स्वच्छता आणि खुल्या शौचालयमुक्त गाव निर्मिती",
+      "beneficiaries": "संपूर्ण गाव",
+      "status": "सक्रिय"
+    },
+    {
+      "name": "उज्ज्वला योजना",
+      "description": "महिलांना मोफत गॅस कनेक्शन उपलब्ध करून देणे",
+      "beneficiaries": "४५० महिला",
+      "status": "सक्रिय"
+    }
+  ],
+  "officials": [
+    {
+      "name": "श्री. रमेश शेटे",
+      "title": "सरपंच",
+      "phone": "+९१ ९८७६५ ४३२१०",
+      "email": "sarpanch.shivpur@gov.in",
+      "image": "/images/sarpanch.jpg"
+    },
+    {
+      "name": "श्रीमती सुनिता पाटील",
+      "title": "उपसरपंच",
+      "phone": "+९१ ९८७६५ ४३२११",
+      "email": "upsarpanch.shivpur@gov.in",
+      "image": "/images/upsarpanch.jpg"
+    },
+    {
+      "name": "श्री. संदीप कुलकर्णी",
+      "title": "ग्रामसेवक",
+      "phone": "+९१ ९८७६५ ४३२१२",
+      "email": "gramsevak.shivpur@gov.in",
+      "image": "/images/gramsevak.jpg"
+    },
+    {
+      "name": "श्रीमती मंगला जाधव",
+      "title": "सचिव",
+      "phone": "+९१ ९८७६५ ४३२१३",
+      "email": "secretary.shivpur@gov.in",
+      "image": "/images/secretary.jpg"
+    }
+  ],
+  "gallery": [
+    {
+      "image": "https://picsum.photos/id/1015/600/400",
+      "caption": "ग्रामसभेत सक्रिय सहभाग घेणारे नागरिक (Placeholder 1)",
+      "category": "सभा"
+    },
+    {
+      "image": "https://picsum.photos/id/1025/600/400",
+      "caption": "गावातील पायाभूत सुविधांचा विकास (Placeholder 2)",
+      "category": "विकास"
+    },
+    {
+      "image": "https://picsum.photos/id/1035/600/400",
+      "caption": "गावातील पारंपरिक उत्सव आणि सण (Placeholder 3)",
+      "category": "सांस्कृतिक"
+    },
+    {
+      "image": "https://picsum.photos/id/1045/600/400",
+      "caption": "आधुनिक शेती तंत्रज्ञानाचा वापर (Placeholder 4)",
+      "category": "शेती"
+    },
+    {
+      "image": "https://picsum.photos/id/1055/600/400",
+      "caption": "आधुनिक सुविधांसह सुसज्ज कार्यालय (Placeholder 5)",
+      "category": "प्रशासन"
+    },
+    {
+      "image": "https://picsum.photos/id/1065/600/400",
+      "caption": "शिवपूर गावाचे सुंदर नैसर्गिक दृश्य (Placeholder 6)",
+      "category": "निसर्ग"
+    }
+  ],
+  "contact": {
+    "address": "शिवपूर ग्राम पंचायत कार्यालय, पुरंदर तालुका, पुणे जिल्हा, महाराष्ट्र, ४१२३०१",
+    "phone": "+९१ ९८७६५ ४३२१०",
+    "email": "shivpur.panchayat@gov.in",
+    "timings": "सकाळ ९:०० ते संध्याकाळ ५:००"
+  }
+}
